@@ -1,0 +1,30 @@
+:root {
+  --bg-color: #1E1D20;
+  --main-blue: #6A69FF;
+  --gray: #8C8C8C;
+  --white: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--white);
+}
+
+.container {
+  max-width: 1240px;
+  min-height: 100dvh;
+
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}

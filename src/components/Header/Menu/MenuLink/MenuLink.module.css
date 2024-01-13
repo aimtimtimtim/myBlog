@@ -1,0 +1,16 @@
+.link {
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--gray);
+    margin-left: 40px;
+
+}
+
+.active {
+    color: var(--main-blue);
+}
+
+.link:hover {
+    color: #B9B9B9;
+    transition: .5s ease
+}

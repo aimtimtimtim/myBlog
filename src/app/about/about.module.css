@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+
+}
+
+.myPhoto_img {
+    max-width: 156px;
+    max-height: 156px;
+    border-radius: 100%;
+}
+
+.info_container {
+    max-width: 594px;
+}
+
+.info_container h2 {
+    font-size: 32px;
+
+}
+
+.first_par {
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.second_par {
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.gh_link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    color: var(--main-blue);
+    font-size: 18px;
+
+    text-decoration: none;
+
+}

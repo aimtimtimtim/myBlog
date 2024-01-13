@@ -5,6 +5,14 @@
     justify-content: space-between;
 }
 
+.text_container {
+    flex: 1;
+}
+
+.text_container {
+    flex: 1;
+}
+
 .text_container p {
     font-size: 24px;
     color: var(--white);
@@ -48,6 +56,7 @@
 }
 
 .img_container {
+    float: right;
     height: 478px;
     width: 478px;
     position: relative;
@@ -108,4 +117,29 @@
     position: absolute;
     right: 90px;
     bottom: 40px;
+}
+
+@media (max-width: 1040px) {
+    .text_container p {
+        font-size: 18px;
+    }
+
+    .text_container h1 {
+        max-width: 480px;
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .img_container {}
+
+}
+
+@media (max-width: 900px) {
+    .text_container h1 {
+        max-width: 300px;
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
 }

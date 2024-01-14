@@ -5,7 +5,7 @@ import React from 'react'
 import styles from './MenuLink.module.css'
 import { usePathname } from 'next/navigation'
 
-const MenuLink = ({ menuLink, setIsOpen }) => {
+const MenuLink = ({ menuLink, toggleMenu }) => {
   const pathName = usePathname()
   return (
     <Link
@@ -13,7 +13,7 @@ const MenuLink = ({ menuLink, setIsOpen }) => {
         pathName === menuLink.path ? styles.active : ''
       }`}
       href={menuLink.path}
-      onClick={() => setIsOpen((prev) => !prev)}
+      onClick={toggleMenu}
     >
       {menuLink.title}
     </Link>

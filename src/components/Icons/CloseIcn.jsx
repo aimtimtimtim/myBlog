@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const MenuIcn = () => {
+const CloseIcn = () => {
   return (
     <svg
       width="24"
@@ -10,25 +10,28 @@ const MenuIcn = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M3 7H21"
+        d="M9.16992 14.8299L14.8299 9.16992"
         stroke="white"
         stroke-width="1.5"
         stroke-linecap="round"
+        stroke-linejoin="round"
       />
       <path
-        d="M3 12H21"
+        d="M14.8299 14.8299L9.16992 9.16992"
         stroke="white"
         stroke-width="1.5"
         stroke-linecap="round"
+        stroke-linejoin="round"
       />
       <path
-        d="M3 17H21"
+        d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
         stroke="white"
         stroke-width="1.5"
         stroke-linecap="round"
+        stroke-linejoin="round"
       />
     </svg>
   )
 }
 
-export default MenuIcn
+export default CloseIcn

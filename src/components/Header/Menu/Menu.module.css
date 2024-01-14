@@ -12,9 +12,16 @@
     z-index: 999;
     position: absolute;
     width: 50%;
-    top: 70px;
-    height: calc(100dvh - 70px);
+    top: 0px;
     right: 0;
+    overflow: hidden;
+    /* Добавлено для скрытия содержимого, которое выходит за границы */
+    height: 0;
+    transform: translateX(100%);
+    transition: height 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+
+
 
     display: flex;
     align-items: center;
@@ -27,8 +34,22 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid #4C4B83;
+    border-left: 1px solid #4C4B83;
 
+
+
+}
+
+.moblie_nav.active {
+    height: 100dvh;
+    transform: translateX(0);
+    /* Показываем меню справа налево */
+}
+
+.close {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 @media (min-width: 700px) {

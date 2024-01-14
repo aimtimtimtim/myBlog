@@ -4,6 +4,7 @@ import MenuLink from './MenuLink/MenuLink'
 import MenuIcn from '../../Icons/MenuIcn'
 import styles from './Menu.module.css'
 import { usePathname } from 'next/navigation'
+import CloseIcn from '../../Icons/CloseIcn'
 
 const menuLinks = [
   {
@@ -36,25 +37,23 @@ const Menu = () => {
           <MenuLink
             key={menuLink.path}
             menuLink={menuLink}
-            setIsOpen={setIsOpen}
+            toggleMenu={toggleMenu}
           />
         ))}
       </nav>
-      <div
-        className={styles.menu_icn}
-        onClick={() => {
-          toggleMenu()
-        }}
-      >
+      <div className={styles.menu_icn} onClick={toggleMenu}>
         <MenuIcn />
       </div>
-      {isOpen && (
-        <nav className={styles.moblie_nav}>
-          {menuLinks.map((menuLink) => (
-            <MenuLink key={menuLink.path} menuLink={menuLink} />
-          ))}
-        </nav>
-      )}
+      <nav className={`${styles.moblie_nav} ${isOpen ? styles.active : ''}`}>
+        <div className={styles.close} onClick={toggleMenu}>
+          <CloseIcn />
+          Close
+        </div>
+
+        {menuLinks.map((menuLink) => (
+          <MenuLink key={menuLink.path} menuLink={menuLink} />
+        ))}
+      </nav>
     </div>
   )
 }

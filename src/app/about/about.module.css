@@ -42,3 +42,67 @@
     text-decoration: none;
 
 }
+
+@media (max-width: 700px) {
+    .myPhoto_img {
+        max-width: 128px;
+        max-height: 128px;
+    }
+
+    .info_container h2 {
+        font-size: 26px;
+
+    }
+
+    .first_par {
+        margin-top: 16px;
+        font-size: 14px;
+    }
+
+    .second_par {
+        font-size: 14px;
+    }
+
+    .gh_link {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 440px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+
+    }
+
+    .info_container {
+        max-width: 380px;
+
+    }
+
+    .myPhoto_img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .info_container h2 {
+        font-size: 18px;
+
+    }
+
+    .first_par {
+        margin-top: 16px;
+        font-size: 16px;
+    }
+
+    .second_par {
+        font-size: 16px;
+    }
+
+    .gh_link {
+        font-size: 14px;
+    }
+}

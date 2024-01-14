@@ -10,7 +10,7 @@ import SendIcn from '@/src/components/Icons/SendIcn'
 const About = () => {
   return (
     <div className={styles.container}>
-      <Image src={myPhoto} className={styles.myPhoto_img} />
+      <Image src={myPhoto} className={styles.myPhoto_img} alt={'myPhoto'} />
       <div className={styles.info_container}>
         <h2>Tim Agayev</h2>
         <p className={styles.first_par}>

@@ -16,18 +16,21 @@ const Home = () => {
           className={styles.react_img}
           height={184}
           width={184}
+          alt={'reactLogo'}
         />
         <Image
           src={nextLogo}
           className={styles.next_img}
           height={30}
           width={30}
+          alt={'nextLogo'}
         />
         <Image
           src={figmaLogo}
           className={styles.figma_img}
           height={25}
           width={20}
+          alt={'figmaLogo'}
         />
       </div>
       <div className={styles.text_container}>

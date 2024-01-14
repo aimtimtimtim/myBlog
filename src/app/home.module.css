@@ -108,7 +108,7 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 440px) {
     .text_container h1 {
         font-size: 22px;
         margin-bottom: 18px;

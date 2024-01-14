@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import MenuLink from './MenuLink/MenuLink'
 import MenuIcn from '../../Icons/MenuIcn'
 import styles from './Menu.module.css'
+import { usePathname } from 'next/navigation'
 
 const menuLinks = [
   {
@@ -25,17 +26,24 @@ const menuLinks = [
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const toggleMenu = () => {
+    setIsOpen((prev) => !prev)
+  }
   return (
     <div className={styles.container}>
       <nav className={styles.nav}>
         {menuLinks.map((menuLink) => (
-          <MenuLink key={menuLink.path} menuLink={menuLink} />
+          <MenuLink
+            key={menuLink.path}
+            menuLink={menuLink}
+            setIsOpen={setIsOpen}
+          />
         ))}
       </nav>
       <div
         className={styles.menu_icn}
         onClick={() => {
-          setIsOpen(!isOpen)
+          toggleMenu()
         }}
       >
         <MenuIcn />

@@ -5,15 +5,15 @@ import React from 'react'
 import styles from './MenuLink.module.css'
 import { usePathname } from 'next/navigation'
 
-const MenuLink = ({ menuLink }) => {
+const MenuLink = ({ menuLink, setIsOpen }) => {
   const pathName = usePathname()
-  console.log(pathName)
   return (
     <Link
       className={`${styles.link} ${
         pathName === menuLink.path ? styles.active : ''
       }`}
       href={menuLink.path}
+      onClick={() => setIsOpen((prev) => !prev)}
     >
       {menuLink.title}
     </Link>

@@ -10,6 +10,26 @@ import figmaLogo from '../../public/figmaLogo.png'
 const Home = () => {
   return (
     <main className={styles.container}>
+      <div className={styles.img_container}>
+        <Image
+          src={reactImg}
+          className={styles.react_img}
+          height={184}
+          width={184}
+        />
+        <Image
+          src={nextLogo}
+          className={styles.next_img}
+          height={30}
+          width={30}
+        />
+        <Image
+          src={figmaLogo}
+          className={styles.figma_img}
+          height={25}
+          width={20}
+        />
+      </div>
       <div className={styles.text_container}>
         <p>
           <span>{'<>'}</span>
@@ -22,13 +42,6 @@ const Home = () => {
         <Link href={'/about'} className={styles.text_container__btn}>
           Start from ‘About’ page
         </Link>
-      </div>
-      <div className={styles.img_container}>
-        <Image src={reactImg} fill className={styles.react_img} />
-        <Image src={nextLogo} className={styles.next_img} />
-        <Image src={figmaLogo} className={styles.figma_img} />
-        <p className={styles.development}>Development</p>
-        <p className={styles.design}>Design</p>
       </div>
     </main>
   )

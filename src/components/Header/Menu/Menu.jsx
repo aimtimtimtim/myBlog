@@ -1,5 +1,8 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import MenuLink from './MenuLink/MenuLink'
+import MenuIcn from '../../Icons/MenuIcn'
+import styles from './Menu.module.css'
 
 const menuLinks = [
   {
@@ -21,12 +24,30 @@ const menuLinks = [
 ]
 
 const Menu = () => {
+  const [isOpen, setIsOpen] = useState(false)
   return (
-    <nav>
-      {menuLinks.map((menuLink) => (
-        <MenuLink key={menuLink.path} menuLink={menuLink} />
-      ))}
-    </nav>
+    <div className={styles.container}>
+      <nav className={styles.nav}>
+        {menuLinks.map((menuLink) => (
+          <MenuLink key={menuLink.path} menuLink={menuLink} />
+        ))}
+      </nav>
+      <div
+        className={styles.menu_icn}
+        onClick={() => {
+          setIsOpen(!isOpen)
+        }}
+      >
+        <MenuIcn />
+      </div>
+      {isOpen && (
+        <nav className={styles.moblie_nav}>
+          {menuLinks.map((menuLink) => (
+            <MenuLink key={menuLink.path} menuLink={menuLink} />
+          ))}
+        </nav>
+      )}
+    </div>
   )
 }
 

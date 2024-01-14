@@ -13,7 +13,9 @@ const MenuLink = ({ menuLink, toggleMenu }) => {
         pathName === menuLink.path ? styles.active : ''
       }`}
       href={menuLink.path}
-      onClick={toggleMenu}
+      onClick={() => {
+        toggleMenu()
+      }}
     >
       {menuLink.title}
     </Link>

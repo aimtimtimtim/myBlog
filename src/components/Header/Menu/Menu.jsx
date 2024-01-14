@@ -28,17 +28,14 @@ const menuLinks = [
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggleMenu = () => {
+    console.log('sdcsdcs')
     setIsOpen((prev) => !prev)
   }
   return (
     <div className={styles.container}>
       <nav className={styles.nav}>
         {menuLinks.map((menuLink) => (
-          <MenuLink
-            key={menuLink.path}
-            menuLink={menuLink}
-            toggleMenu={toggleMenu}
-          />
+          <MenuLink key={menuLink.path} menuLink={menuLink} />
         ))}
       </nav>
       <div className={styles.menu_icn} onClick={toggleMenu}>
@@ -51,7 +48,11 @@ const Menu = () => {
         </div>
 
         {menuLinks.map((menuLink) => (
-          <MenuLink key={menuLink.path} menuLink={menuLink} />
+          <MenuLink
+            key={menuLink.path}
+            menuLink={menuLink}
+            toggleMenu={toggleMenu}
+          />
         ))}
       </nav>
     </div>

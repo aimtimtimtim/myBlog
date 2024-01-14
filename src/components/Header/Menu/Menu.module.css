@@ -9,6 +9,7 @@
 }
 
 .moblie_nav {
+    z-index: 999;
     position: absolute;
     width: 50%;
     top: 70px;
